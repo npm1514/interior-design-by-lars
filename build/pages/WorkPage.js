@@ -60,7 +60,9 @@ function (_Component) {
       }, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement("img", {
         src: "/images/IMG_6151.JPG"
       }), _react["default"].createElement("img", {
-        src: "/images/mbb_1280_1_2_small.jpg"
+        src: "/images/mbb_1340_1_2_small.jpg"
+      }), _react["default"].createElement("img", {
+        src: "/images/shower.jpg"
       }), _react["default"].createElement("img", {
         src: "/images/mbb_1274_5_6_small.jpg"
       }), _react["default"].createElement("img", {
@@ -70,7 +72,7 @@ function (_Component) {
       }), _react["default"].createElement("img", {
         src: "/images/masterpiece.jpg"
       }), _react["default"].createElement("img", {
-        src: "/images/mbb_1340_1_2_small.jpg"
+        src: "/images/mbb_1280_1_2_small.jpg"
       }))), _react["default"].createElement(_global.Title, {
         style: {
           marginTop: "100px"
@@ -91,6 +93,10 @@ function (_Component) {
         src: "/images/IMG_6365.JPG"
       }), _react["default"].createElement("img", {
         src: "/images/IMG_6367.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/moretiles.jpg"
+      }), _react["default"].createElement("img", {
+        src: "/images/petrified.jpg"
       })), _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement("img", {
         src: "/images/IMG_6292.JPG"
       }), _react["default"].createElement("img", {
@@ -105,6 +111,10 @@ function (_Component) {
         src: "/images/IMG_6366.JPG"
       }), _react["default"].createElement("img", {
         src: "/images/IMG_6368.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/tiles_2.jpg"
+      }), _react["default"].createElement("img", {
+        src: "/images/tiles.jpg"
       }))), _react["default"].createElement(_global.FlexSplit, null, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
         img: "/images/IMG_6151.JPG",
         text: "Home",

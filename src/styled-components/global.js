@@ -181,7 +181,7 @@ import styled from 'styled-components';
     width: 100%;
     height: 550px;
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
   `;
