@@ -95,6 +95,13 @@ import styled from 'styled-components';
     bottom: -68px;
     display: flex;
     justify-content: center;
+    .greyAnchors {
+      a {
+        margin: 0 10px;
+        font-family: 'Noto Serif JP', serif;
+        color: #eee;
+      }
+    }
     a {
       margin: 0 10px;
       font-family: 'Noto Serif JP', serif;
@@ -184,6 +191,10 @@ import styled from 'styled-components';
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    @media(max-device-width: 420px){
+      background-attachment: static;
+      height: 400px;
+    }
   `;
 
   export const LinkSquare = styled.div`

@@ -40,7 +40,7 @@ function _templateObject15() {
 }
 
 function _templateObject14() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 550px;\n    background-size: cover;\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-attachment: fixed;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 550px;\n    background-size: cover;\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-attachment: fixed;\n    @media(max-device-width: 420px){\n      background-attachment: static;\n      height: 400px;\n    }\n  "]);
 
   _templateObject14 = function _templateObject14() {
     return data;
@@ -80,7 +80,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    position: absolute;\n    bottom: -68px;\n    display: flex;\n    justify-content: center;\n    a {\n      margin: 0 10px;\n      font-family: 'Noto Serif JP', serif;\n      color: #fff;\n    }\n    a:hover {\n      cursor: pointer;\n      color: #ffffff66;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    position: absolute;\n    bottom: -68px;\n    display: flex;\n    justify-content: center;\n    .greyAnchors {\n      a {\n        margin: 0 10px;\n        font-family: 'Noto Serif JP', serif;\n        color: #eee;\n      }\n    }\n    a {\n      margin: 0 10px;\n      font-family: 'Noto Serif JP', serif;\n      color: #fff;\n    }\n    a:hover {\n      cursor: pointer;\n      color: #ffffff66;\n    }\n  "]);
 
   _templateObject10 = function _templateObject10() {
     return data;

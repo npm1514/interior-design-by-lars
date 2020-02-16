@@ -53,14 +53,14 @@ function (_Component) {
         style: {
           margin: "100px 0"
         }
-      }, _react["default"].createElement(_global.Subtitle, null, "Lars has a passion for clean design, innovative solutions, and refreshing looks. She has experience in tile design, landscape architecture, and floral arrangement. Look to Lars for your next residential design needs.")), _react["default"].createElement(_global.FlexSplit, null, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
+      }, _react["default"].createElement(_global.Subtitle, null, "Lars has a passion for clean design, innovative solutions, and refreshing looks. She has experience in tile design, landscape architecture, and floral arrangement.")), _react["default"].createElement(_global.FlexSplit, null, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
         img: "/images/IMG_6151.JPG",
         text: "Home",
         link: "/"
       })), _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
         img: "/images/tiles_2.jpg",
         text: "Work",
-        link: "/about"
+        link: "/work"
       })))), _react["default"].createElement(_components.ExperienceContact, null), _react["default"].createElement(_components.Footer, null));
     }
   }]);

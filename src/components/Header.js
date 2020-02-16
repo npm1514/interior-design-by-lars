@@ -6,7 +6,7 @@ class HeaderComponent extends Component {
   render(){
     return (
       <Header>
-        <DesktopHeader/>
+        <DesktopHeader className={this.props.className}/>
         <MobileHeader/>
       </Header>
     );

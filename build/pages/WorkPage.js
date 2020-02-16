@@ -47,7 +47,9 @@ function (_Component) {
   _createClass(Work, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_global.PageWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_global.PageContent, null, _react["default"].createElement(_components.Paralax, {
+      return _react["default"].createElement(_global.PageWrapper, null, _react["default"].createElement(_components.Header, {
+        className: "greyAnchors"
+      }), _react["default"].createElement(_global.PageContent, null, _react["default"].createElement(_components.Paralax, {
         img: "/images/herringbone.jpg"
       }), _react["default"].createElement(_global.Title, {
         style: {

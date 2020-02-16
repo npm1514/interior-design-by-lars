@@ -6,7 +6,7 @@ class Work extends Component {
   render(){
     return (
       <PageWrapper>
-        <Header/>
+        <Header className="greyAnchors"/>
         <PageContent>
           <Paralax img="/images/herringbone.jpg" />
           <Title style={{marginTop: "100px"}}>Commercial Work</Title>

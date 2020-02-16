@@ -47,7 +47,9 @@ function (_Component) {
   _createClass(HeaderComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_global.Header, null, _react["default"].createElement(_.DesktopHeader, null), _react["default"].createElement(_.MobileHeader, null));
+      return _react["default"].createElement(_global.Header, null, _react["default"].createElement(_.DesktopHeader, {
+        className: this.props.className
+      }), _react["default"].createElement(_.MobileHeader, null));
     }
   }]);
 

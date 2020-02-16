@@ -45,7 +45,9 @@ function (_Component) {
   _createClass(DesktopHeaderComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_global.DesktopHeader, null, _react["default"].createElement(_global.Title, null, "Interior Design By Lars"), _react["default"].createElement(_global.BottomWrap, null, _react["default"].createElement("a", {
+      return _react["default"].createElement(_global.DesktopHeader, null, _react["default"].createElement(_global.Title, null, "Interior Design By Lars"), _react["default"].createElement(_global.BottomWrap, {
+        className: this.props.className
+      }, _react["default"].createElement("a", {
         href: "/"
       }, "Home"), _react["default"].createElement("a", {
         href: "/about"

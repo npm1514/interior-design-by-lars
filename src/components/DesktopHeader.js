@@ -6,7 +6,7 @@ class DesktopHeaderComponent extends Component {
     return (
       <DesktopHeader>
         <Title>Interior Design By Lars</Title>
-        <BottomWrap>
+        <BottomWrap className={this.props.className}>
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/work">Work</a>
