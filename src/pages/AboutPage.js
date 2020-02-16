@@ -11,6 +11,7 @@ class About extends Component {
                 <Paralax img="/images/lars.jpg" />
                 <SplitDiv style={{margin: "100px 0"}}>
                   <Subtitle>Lars has a passion for clean design, innovative solutions, and refreshing looks. She has experience in tile design, landscape architecture, and floral arrangement.</Subtitle>
+                  <Subtitle>I love to work with nature. Buildings can be designed as part of its natural setting, maximising views, and creating open air flow and lighting to enhance living spaces.</Subtitle>
                 </SplitDiv>
                 <FlexSplit>
                   <SplitDiv>

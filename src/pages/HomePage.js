@@ -10,7 +10,7 @@ class Home extends Component {
               <PageContent>
                 <Paralax img="/images/IMG_6151.JPG" />
                 <SplitDiv style={{margin: "100px 0"}}>
-                  <Subtitle>Lars has a passion for clean design, innovative solutions, and refreshing looks. She has experience in tile design, landscape architecture, and floral arrangement.</Subtitle>
+                  <Subtitle>Design is not just what it looks like and feels like. Design is how it works.</Subtitle>
                 </SplitDiv>
                 <FlexSplit>
                   <SplitDiv>

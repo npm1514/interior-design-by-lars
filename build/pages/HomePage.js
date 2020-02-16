@@ -53,7 +53,7 @@ function (_Component) {
         style: {
           margin: "100px 0"
         }
-      }, _react["default"].createElement(_global.Subtitle, null, "Lars has a passion for clean design, innovative solutions, and refreshing looks. She has experience in tile design, landscape architecture, and floral arrangement.")), _react["default"].createElement(_global.FlexSplit, null, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
+      }, _react["default"].createElement(_global.Subtitle, null, "Design is not just what it looks like and feels like. Design is how it works.")), _react["default"].createElement(_global.FlexSplit, null, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
         img: "/images/lars.jpg",
         text: "About",
         link: "/about"

@@ -192,7 +192,7 @@ import styled from 'styled-components';
     background-repeat: no-repeat;
     background-attachment: fixed;
     @media(max-device-width: 420px){
-      background-attachment: static;
+      background-attachment: scroll;
       height: 400px;
     }
   `;

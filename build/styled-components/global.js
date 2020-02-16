@@ -40,7 +40,7 @@ function _templateObject15() {
 }
 
 function _templateObject14() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 550px;\n    background-size: cover;\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-attachment: fixed;\n    @media(max-device-width: 420px){\n      background-attachment: static;\n      height: 400px;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 550px;\n    background-size: cover;\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-attachment: fixed;\n    @media(max-device-width: 420px){\n      background-attachment: scroll;\n      height: 400px;\n    }\n  "]);
 
   _templateObject14 = function _templateObject14() {
     return data;
