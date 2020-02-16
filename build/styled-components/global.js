@@ -3,14 +3,54 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Footer = exports.BottomWrap = exports.MenuWrap = exports.DesktopHeader = exports.MobileHeader = exports.Header = exports.Title = exports.PageContent = exports.PageWrapper = void 0;
+exports.SplitDiv = exports.ExperienceContact = exports.Footer = exports.BottomWrap = exports.MenuWrap = exports.DesktopHeader = exports.MobileHeader = exports.Header = exports.Subtitle = exports.Button = exports.Title = exports.PageContent = exports.PageWrapper = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _templateObject13() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    @media (min-width: 600px){\n      width: 50%;\n    }\n  "]);
+
+  _templateObject13 = function _templateObject13() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject12() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    flex-direction: column;\n    margin-top: 100px;\n    input {\n      width: 100%;\n      padding: 16px;\n      display: block;\n      margin: 16px 0;\n      font-size: 15px;\n      border: 1px solid #eee;\n      font-family: 'Noto Serif JP', serif;\n    }\n    textarea {\n      width: 100%;\n      padding: 16px;\n      display: block;\n      margin: 16px 0;\n      font-size: 15px;\n      border: 1px solid #eee;\n      font-family: 'Noto Serif JP', serif;\n    }\n    p {\n      font-size: 16px;\n      letter-spacing: 0em;\n      font-family: 'Noto Serif JP', serif;\n      font-weight: 400;\n      font-style: normal;\n      font-size: 15px;\n      letter-spacing: .05em;\n      line-height: 2em;\n      text-transform: none;\n      color: rgba(51,51,51,.5);\n      margin: 4px 0;\n      margin-right: 32px;\n    }\n    div:nth-child(2){\n      margin-top: 100px;\n    }\n    @media (min-width: 600px){\n      flex-direction: row;\n      div:nth-child(2){\n        margin-top: 0;\n      }\n    }\n  "]);
+
+  _templateObject12 = function _templateObject12() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject11() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    font-family: 'Noto Serif JP', serif;\n    font-size: 16px;\n    text-align: center;\n    padding: 16px 0;\n    display: flex;\n    margin-top: 100px;\n    justify-content: center;\n  "]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    position: absolute;\n    bottom: -68px;\n    display: flex;\n    justify-content: center;\n    a {\n      margin: 0 10px;\n      font-family: 'Noto Serif JP', serif;\n      color: #fff;\n    }\n    a:hover {\n      cursor: pointer;\n      color: #ffffff66;\n    }\n  "]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    font-family: 'Noto Serif JP', serif;\n    font-size: 16px;\n    text-align: center;\n    padding: 16px 0;\n    display: flex;\n    justify-content: center;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    left:0;\n    top: 2.5px;\n  "]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -20,7 +60,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    position: absolute;\n    bottom: -68px;\n    display: flex;\n    justify-content: center;\n    a {\n      margin: 0 10px;\n      font-family: 'Noto Serif JP', serif;\n      color: #fff;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 100%;\n    display: none;\n    position: relative;\n    @media (min-width: 600px){\n      display: flex;\n      align-items: center;\n      justify-content: center;\n    }\n  "]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -30,7 +70,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    left:0;\n    top: 2.5px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: block;\n    height: 52px;\n    position: relative;\n    @media (min-width: 600px){\n      display: none;\n    }\n  "]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -40,7 +80,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 100%;\n    display: none;\n    position: relative;\n    @media (min-width: 600px){\n      display: flex;\n      align-items: center;\n      justify-content: center;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 52px;\n    @media(min-width: 600px){\n      height: 130px;\n    }\n  "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -50,7 +90,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: block;\n    height: 52px;\n    position: relative;\n    @media (min-width: 600px){\n      display: none;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    font-family: 'Noto Serif JP', serif;\n    font-size: 16px;\n    text-align: left;\n    color: #333;\n    font-weight: 100;\n    @media (min-width: 350px){\n      font-size: 18px;\n    }\n  "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -60,7 +100,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 52px;\n    @media(min-width: 600px){\n      height: 130px;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    font-family: 'Noto Serif JP', serif;\n    text-align: center;\n    color: #333;\n    font-weight: 100;\n    margin: 0;\n    font-size: 12px;\n    padding: 8px 16px;\n    background: #00000009;\n  "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -110,32 +150,48 @@ var PageContent = _styledComponents["default"].div(_templateObject2());
 
 exports.PageContent = PageContent;
 
-var Title = _styledComponents["default"].h1(_templateObject3()); //header
-
+var Title = _styledComponents["default"].h1(_templateObject3());
 
 exports.Title = Title;
 
-var Header = _styledComponents["default"].header(_templateObject4());
+var Button = _styledComponents["default"].button(_templateObject4());
+
+exports.Button = Button;
+
+var Subtitle = _styledComponents["default"].h2(_templateObject5()); //header
+
+
+exports.Subtitle = Subtitle;
+
+var Header = _styledComponents["default"].header(_templateObject6());
 
 exports.Header = Header;
 
-var MobileHeader = _styledComponents["default"].div(_templateObject5());
+var MobileHeader = _styledComponents["default"].div(_templateObject7());
 
 exports.MobileHeader = MobileHeader;
 
-var DesktopHeader = _styledComponents["default"].div(_templateObject6());
+var DesktopHeader = _styledComponents["default"].div(_templateObject8());
 
 exports.DesktopHeader = DesktopHeader;
 
-var MenuWrap = _styledComponents["default"].div(_templateObject7());
+var MenuWrap = _styledComponents["default"].div(_templateObject9());
 
 exports.MenuWrap = MenuWrap;
 
-var BottomWrap = _styledComponents["default"].div(_templateObject8()); //Footer
+var BottomWrap = _styledComponents["default"].div(_templateObject10()); //Footer
 
 
 exports.BottomWrap = BottomWrap;
 
-var Footer = _styledComponents["default"].footer(_templateObject9());
+var Footer = _styledComponents["default"].footer(_templateObject11());
 
 exports.Footer = Footer;
+
+var ExperienceContact = _styledComponents["default"].div(_templateObject12());
+
+exports.ExperienceContact = ExperienceContact;
+
+var SplitDiv = _styledComponents["default"].div(_templateObject13());
+
+exports.SplitDiv = SplitDiv;

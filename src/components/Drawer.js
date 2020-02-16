@@ -1,58 +1,25 @@
-import React, { Component } from 'react';
-import { Drawer, Button, List, Divider, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
-import { InboxIcon, MailIcon } from '@material-ui/icons';
+import React, { Component } from 'react'
+import { Drawer, List, ListItem, ListItemText } from '@material-ui/core';
 
 class TemporaryDrawer extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      left: false
-    }
-  }
-  toggleDrawer = (side, open) => event => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-
-    this.setState({left: open });
-  }
-  sideList = side => (
-    <div
-      role="presentation"
-      onClick={this.toggleDrawer(side, false)}
-      onKeyDown={this.toggleDrawer(side, false)}
-    >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  )
   render(){
+    const { toggleDrawer, open } = this.props;
     return (
-      <div>
-        <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
         <Drawer
-          anchor="left"
-          open={this.state.left}
-          onClose={this.toggleDrawer('left', false)}
+          anchor="right"
+          open={open}
+          onClose={toggleDrawer}
         >
-          {this.sideList('left')}
+          <List style={{width: "250px"}}>
+            {['Home', 'About', 'Work'].map((text, index) => (
+              <a href={`/${text.toLowerCase()}`} style={{color: "#333333b3"}} key={index}>
+                <ListItem button key={text}>
+                  <ListItemText primary={text} />
+                </ListItem>
+              </a>
+            ))}
+          </List>
         </Drawer>
-      </div>
     );
   }
 }

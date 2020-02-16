@@ -9,8 +9,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _core = require("@material-ui/core");
 
-var _icons = require("@material-ui/icons");
-
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -25,78 +23,53 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var TemporaryDrawer =
 /*#__PURE__*/
 function (_Component) {
   _inherits(TemporaryDrawer, _Component);
 
-  function TemporaryDrawer(props) {
-    var _this;
-
+  function TemporaryDrawer() {
     _classCallCheck(this, TemporaryDrawer);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(TemporaryDrawer).call(this, props));
-
-    _defineProperty(_assertThisInitialized(_this), "toggleDrawer", function (side, open) {
-      return function (event) {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-          return;
-        }
-
-        _this.setState({
-          left: open
-        });
-      };
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "sideList", function (side) {
-      return _react["default"].createElement("div", {
-        role: "presentation",
-        onClick: _this.toggleDrawer(side, false),
-        onKeyDown: _this.toggleDrawer(side, false)
-      }, _react["default"].createElement(_core.List, null, ['Inbox', 'Starred', 'Send email', 'Drafts'].map(function (text, index) {
-        return _react["default"].createElement(_core.ListItem, {
-          button: true,
-          key: text
-        }, _react["default"].createElement(_core.ListItemIcon, null, index % 2 === 0 ? _react["default"].createElement(_icons.InboxIcon, null) : _react["default"].createElement(_icons.MailIcon, null)), _react["default"].createElement(_core.ListItemText, {
-          primary: text
-        }));
-      })), _react["default"].createElement(_core.Divider, null), _react["default"].createElement(_core.List, null, ['All mail', 'Trash', 'Spam'].map(function (text, index) {
-        return _react["default"].createElement(_core.ListItem, {
-          button: true,
-          key: text
-        }, _react["default"].createElement(_core.ListItemIcon, null, index % 2 === 0 ? _react["default"].createElement(_icons.InboxIcon, null) : _react["default"].createElement(_icons.MailIcon, null)), _react["default"].createElement(_core.ListItemText, {
-          primary: text
-        }));
-      })));
-    });
-
-    _this.state = {
-      left: false
-    };
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(TemporaryDrawer).apply(this, arguments));
   }
 
   _createClass(TemporaryDrawer, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement("div", null, _react["default"].createElement(_core.Button, {
-        onClick: this.toggleDrawer('left', true)
-      }, "Open Left"), _react["default"].createElement(_core.Drawer, {
-        anchor: "left",
-        open: this.state.left,
-        onClose: this.toggleDrawer('left', false)
-      }, this.sideList('left')));
+      var _this$props = this.props,
+          toggleDrawer = _this$props.toggleDrawer,
+          open = _this$props.open;
+      return _react["default"].createElement(_core.Drawer, {
+        anchor: "right",
+        open: open,
+        onClose: toggleDrawer
+      }, _react["default"].createElement(_core.List, {
+        style: {
+          width: "250px"
+        }
+      }, ['Home', 'About', 'Work'].map(function (text, index) {
+        return _react["default"].createElement("a", {
+          href: "/".concat(text.toLowerCase()),
+          style: {
+            color: "#333333b3"
+          },
+          key: index
+        }, _react["default"].createElement(_core.ListItem, {
+          button: true,
+          key: text
+        }, _react["default"].createElement(_core.ListItemText, {
+          primary: text
+        })));
+      })));
     }
   }]);
 

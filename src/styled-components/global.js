@@ -31,6 +31,28 @@ import styled from 'styled-components';
     }
   `;
 
+  export const Button = styled.button`
+    font-family: 'Noto Serif JP', serif;
+    text-align: center;
+    color: #333;
+    font-weight: 100;
+    margin: 0;
+    font-size: 12px;
+    padding: 8px 16px;
+    background: #00000009;
+  `;
+
+  export const Subtitle = styled.h2`
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    text-align: left;
+    color: #333;
+    font-weight: 100;
+    @media (min-width: 350px){
+      font-size: 18px;
+    }
+  `;
+
   //header
   export const Header = styled.header`
     width: 100%;
@@ -91,5 +113,63 @@ import styled from 'styled-components';
     text-align: center;
     padding: 16px 0;
     display: flex;
+    margin-top: 100px;
     justify-content: center;
+  `;
+
+  export const ExperienceContact = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 100px;
+    input {
+      width: 100%;
+      padding: 16px;
+      display: block;
+      margin: 16px 0;
+      font-size: 15px;
+      border: 1px solid #eee;
+      font-family: 'Noto Serif JP', serif;
+    }
+    textarea {
+      width: 100%;
+      padding: 16px;
+      display: block;
+      margin: 16px 0;
+      font-size: 15px;
+      border: 1px solid #eee;
+      font-family: 'Noto Serif JP', serif;
+    }
+    p {
+      font-size: 16px;
+      letter-spacing: 0em;
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 15px;
+      letter-spacing: .05em;
+      line-height: 2em;
+      text-transform: none;
+      color: rgba(51,51,51,.5);
+      margin: 4px 0;
+      margin-right: 32px;
+    }
+    div:nth-child(2){
+      margin-top: 100px;
+    }
+    @media (min-width: 600px){
+      flex-direction: row;
+      div:nth-child(2){
+        margin-top: 0;
+      }
+    }
+  `;
+
+  export const SplitDiv = styled.div`
+    width: 100%;
+    @media (min-width: 600px){
+      width: 50%;
+    }
   `;

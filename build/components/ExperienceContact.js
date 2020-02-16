@@ -9,12 +9,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _global = require("../styled-components/global");
 
-var _Menu = _interopRequireDefault(require("@material-ui/icons/Menu"));
-
-var _Drawer = _interopRequireDefault(require("./Drawer"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -39,45 +33,110 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var MobileHeaderComponent =
+var ExperienceContactComponent =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(MobileHeaderComponent, _Component);
+  _inherits(ExperienceContactComponent, _Component);
 
-  function MobileHeaderComponent(props) {
+  function ExperienceContactComponent(props) {
     var _this;
 
-    _classCallCheck(this, MobileHeaderComponent);
+    _classCallCheck(this, ExperienceContactComponent);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(MobileHeaderComponent).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ExperienceContactComponent).call(this, props));
 
-    _defineProperty(_assertThisInitialized(_this), "toggleDrawer", function () {
+    _defineProperty(_assertThisInitialized(_this), "changeState", function (e, prop) {
+      var obj = {};
+      obj[prop] = e.target.value;
+
+      _this.setState(obj);
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "displayMessage", function (message) {
       _this.setState({
-        menuOpen: !_this.state.menuOpen
+        displayedMessage: message
+      }, function () {
+        setTimeout(function () {
+          _this.setState({
+            displayedMessage: ""
+          });
+        }, 4000);
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "sendEmail", function (e) {
+      e.preventDefault();
+      var _this$state = _this.state,
+          email = _this$state.email,
+          message = _this$state.message;
+      var data = {
+        email: email,
+        message: message
+      };
+      fetch('/emailer', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }).then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this.setState({
+          email: "",
+          message: ""
+        });
+
+        _this.displayMessage("An email has been sent to Lars. She will respond with any further correspondance.");
+      })["catch"](function (err) {
+        return console.error(err);
       });
     });
 
     _this.state = {
-      menuOpen: false
+      email: "",
+      message: "",
+      displayedMessage: ""
     };
     return _this;
   }
 
-  _createClass(MobileHeaderComponent, [{
+  _createClass(ExperienceContactComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_global.MobileHeader, null, _react["default"].createElement(_global.MenuWrap, null, _react["default"].createElement(_Menu["default"], {
-        fill: "#33333380",
-        onClick: this.toggleDrawer
-      })), _react["default"].createElement(_global.Title, null, "Interior Design By Lars"), _react["default"].createElement(_Drawer["default"], {
-        open: this.state.menuOpen,
-        toggleDrawer: this.toggleDrawer
-      }));
+      var _this2 = this;
+
+      var _this$state2 = this.state,
+          email = _this$state2.email,
+          message = _this$state2.message,
+          displayedMessage = _this$state2.displayedMessage;
+      return _react["default"].createElement("div", null, _react["default"].createElement(_global.ExperienceContact, null, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_global.Subtitle, null, "Work Experience"), _react["default"].createElement("p", null, "Designer/Sales - Anasazi Stone"), _react["default"].createElement("p", null, "Residential Tile Design"), _react["default"].createElement("p", null, "Assistant Landscape Designer - Organic Earth Designs"), _react["default"].createElement("p", null, "Floral Arrangement, Wedding Reception Design"), _react["default"].createElement("p", null, "Interior Design Intern - Osmond Design"), _react["default"].createElement("p", null, "Spatial Design and Organization")), _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_global.Subtitle, null, "Contact"), _react["default"].createElement("p", null, "slarsrobertson@gmail.com"), _react["default"].createElement("p", null, "385-274-8887"), _react["default"].createElement("form", {
+        onSubmit: this.sendEmail
+      }, _react["default"].createElement("input", {
+        value: email,
+        onChange: function onChange(e) {
+          _this2.changeState(e, "email");
+        },
+        placeholder: "Email Address",
+        type: "email"
+      }), _react["default"].createElement("textarea", {
+        value: message,
+        onChange: function onChange(e) {
+          _this2.changeState(e, "message");
+        },
+        placeholder: "Message"
+      }), _react["default"].createElement(_global.Button, {
+        type: "submit"
+      }, "SUBMIT")))), displayedMessage && _react["default"].createElement(_global.Title, {
+        style: {
+          color: "#000"
+        }
+      }, displayedMessage));
     }
   }]);
 
-  return MobileHeaderComponent;
+  return ExperienceContactComponent;
 }(_react.Component);
 
-var _default = MobileHeaderComponent;
+var _default = ExperienceContactComponent;
 exports["default"] = _default;

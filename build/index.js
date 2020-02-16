@@ -24,8 +24,15 @@ var _cors = _interopRequireDefault(require("cors"));
 
 var _bodyParser = _interopRequireDefault(require("body-parser"));
 
+var _nodemailer = _interopRequireDefault(require("nodemailer"));
+
+var _config = _interopRequireDefault(require("./config"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+var Cryptr = require('cryptr');
+
+var cryptr = new Cryptr(_config["default"].key);
 var PORT = process.env.PORT || 3003;
 var app = (0, _express["default"])();
 app.use((0, _compression["default"])());
@@ -57,6 +64,9 @@ app.get('/', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, homeBundle, _HomeRoot["default"], "home"));
 });
+app.get('/home', function (req, res) {
+  res.redirect('/');
+});
 app.get('/about', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
@@ -67,7 +77,31 @@ app.get('/work', function (req, res) {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, workBundle, _WorkRoot["default"], "work"));
 });
-;
+app.post('/emailer', function (req, res) {
+  var transporter = _nodemailer["default"].createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    requireTLS: true,
+    auth: {
+      user: cryptr.decrypt(_config["default"].email),
+      pass: cryptr.decrypt(_config["default"].emailerPW)
+    }
+  });
+
+  transporter.sendMail({
+    from: req.body.email,
+    to: cryptr.decrypt(_config["default"].email),
+    subject: 'Interior Design Inquiry',
+    html: "\n      <h3>Hi Lars!</h3>\n      <h3>The following email, ".concat(req.body.email, ", has a message for you and it can be read below.</h3>\n      <h3>Message:</h3>\n      <h3>").concat(req.body.message, "</h3>\n    ")
+  }, function (error, info) {
+    if (error) res.send({
+      error: error
+    });else res.send({
+      response: info
+    });
+  });
+});
 app.get('/health', function (req, res) {
   return res.send('OK');
 });

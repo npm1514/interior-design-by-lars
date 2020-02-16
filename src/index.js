@@ -13,6 +13,12 @@ import fs from 'fs';
 import compression from 'compression';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import nodemailer from 'nodemailer';
+
+import config from './config';
+
+const Cryptr = require('cryptr');
+const cryptr = new Cryptr(config.key);
 
 var PORT = process.env.PORT || 3003;
 
@@ -45,6 +51,9 @@ app.get('/', (req, res) => {
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, homeBundle, HomeRoot, "home"));
 });
+app.get('/home', (req, res) => {
+  res.redirect('/');
+});
 app.get('/about', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
@@ -54,7 +63,35 @@ app.get('/work', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, workBundle, WorkRoot, "work"));
-});;
+});
+
+app.post('/emailer', (req, res) => {
+  var transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    requireTLS: true,
+    auth: {
+      user: cryptr.decrypt(config.email),
+      pass: cryptr.decrypt(config.emailerPW)
+    }
+  });
+
+  transporter.sendMail({
+    from: req.body.email,
+    to: cryptr.decrypt(config.email),
+    subject: 'Interior Design Inquiry',
+    html: `
+      <h3>Hi Lars!</h3>
+      <h3>The following email, ${req.body.email}, has a message for you and it can be read below.</h3>
+      <h3>Message:</h3>
+      <h3>${req.body.message}</h3>
+    `
+  }, (error, info) => {
+    if (error) res.send({error: error});
+    else res.send({response: info});
+  });
+})
 
 app.get('/health', (req, res) => res.send('OK'));
 
