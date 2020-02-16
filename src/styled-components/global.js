@@ -24,7 +24,7 @@ import styled from 'styled-components';
     font-size: 18px;
     text-align: center;
     color: #333;
-    margin: 0 24px;
+    margin: 8px 24px;
     font-weight: 100;
     @media (min-width: 350px){
       font-size: 20px;
@@ -48,6 +48,7 @@ import styled from 'styled-components';
     text-align: left;
     color: #333;
     font-weight: 100;
+    line-height: 3;
     @media (min-width: 350px){
       font-size: 18px;
     }
@@ -117,10 +118,10 @@ import styled from 'styled-components';
     justify-content: center;
   `;
 
-  export const ExperienceContact = styled.div`
+  export const FlexSplit = styled.div`
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
     margin-top: 100px;
@@ -169,7 +170,56 @@ import styled from 'styled-components';
 
   export const SplitDiv = styled.div`
     width: 100%;
-    @media (min-width: 600px){
-      width: 50%;
+    img {
+      margin-bottom: 16px;
     }
+    @media (min-width: 600px){
+      width: calc(50% - 8px);
+    }
+  `;
+  export const Paralax = styled.div`
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  `;
+
+  export const LinkSquare = styled.div`
+    width: calc(100vw - 48px);
+    height: calc(100vw - 48px);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    @media(min-width: 600px){
+      width: calc(50vw - 56px);
+      height: calc(50vw - 56px);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover h1 {
+      background-color: #ffffff50;
+    }
+  `;
+  export const SquareLink = styled.a`
+
+  `;
+  export const LinkText = styled.h1`
+    font-family: 'Noto Serif JP', serif;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    background-color: #ffffff80;
+    padding: 12px;
+    height: max-content;
+    font-weight: 100;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
   `;

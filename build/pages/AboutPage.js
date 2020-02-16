@@ -47,9 +47,21 @@ function (_Component) {
   _createClass(About, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_global.PageWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_global.PageContent, null, _react["default"].createElement("img", {
-        src: "https://cdn.onekindesign.com/wp-content/uploads/2016/02/Scandinavian-Bedroom-Ideas-01-1-Kindesign.jpg"
-      })), _react["default"].createElement(_components.ExperienceContact, null), _react["default"].createElement(_components.Footer, null));
+      return _react["default"].createElement(_global.PageWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_global.PageContent, null, _react["default"].createElement(_components.Paralax, {
+        img: "/images/lars.jpg"
+      }), _react["default"].createElement(_global.SplitDiv, {
+        style: {
+          margin: "100px 0"
+        }
+      }, _react["default"].createElement(_global.Subtitle, null, "Lars has a passion for clean design, innovative solutions, and refreshing looks. She has experience in tile design, landscape architecture, and floral arrangement. Look to Lars for your next residential design needs.")), _react["default"].createElement(_global.FlexSplit, null, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
+        img: "/images/IMG_6151.JPG",
+        text: "Home",
+        link: "/"
+      })), _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
+        img: "/images/tiles_2.jpg",
+        text: "Work",
+        link: "/about"
+      })))), _react["default"].createElement(_components.ExperienceContact, null), _react["default"].createElement(_components.Footer, null));
     }
   }]);
 

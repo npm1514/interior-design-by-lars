@@ -47,9 +47,73 @@ function (_Component) {
   _createClass(Work, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_global.PageWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_global.PageContent, null, _react["default"].createElement("img", {
-        src: "https://cdn.onekindesign.com/wp-content/uploads/2016/02/Scandinavian-Bedroom-Ideas-01-1-Kindesign.jpg"
-      })), _react["default"].createElement(_components.Footer, null));
+      return _react["default"].createElement(_global.PageWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_global.PageContent, null, _react["default"].createElement(_components.Paralax, {
+        img: "/images/herringbone.jpg"
+      }), _react["default"].createElement(_global.Title, {
+        style: {
+          marginTop: "100px"
+        }
+      }, "Commercial Work"), _react["default"].createElement(_global.FlexSplit, {
+        style: {
+          marginTop: 0
+        }
+      }, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement("img", {
+        src: "/images/IMG_6151.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/mbb_1280_1_2_small.jpg"
+      }), _react["default"].createElement("img", {
+        src: "/images/mbb_1274_5_6_small.jpg"
+      }), _react["default"].createElement("img", {
+        src: "/images/mbb-29_30_31_small.jpg"
+      })), _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement("img", {
+        src: "/images/IMG_5935.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/masterpiece.jpg"
+      }), _react["default"].createElement("img", {
+        src: "/images/mbb_1340_1_2_small.jpg"
+      }))), _react["default"].createElement(_global.Title, {
+        style: {
+          marginTop: "100px"
+        }
+      }, "Tile Work"), _react["default"].createElement(_global.FlexSplit, {
+        style: {
+          marginTop: 0
+        }
+      }, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement("img", {
+        src: "/images/IMG_5978.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/IMG_6290.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/IMG_6295.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/IMG_6362.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/IMG_6365.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/IMG_6367.JPG"
+      })), _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement("img", {
+        src: "/images/IMG_6292.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/IMG_6293.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/IMG_6361.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/IMG_6363.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/IMG_6364.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/IMG_6366.JPG"
+      }), _react["default"].createElement("img", {
+        src: "/images/IMG_6368.JPG"
+      }))), _react["default"].createElement(_global.FlexSplit, null, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
+        img: "/images/IMG_6151.JPG",
+        text: "Home",
+        link: "/"
+      })), _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
+        img: "/images/lars.jpg",
+        text: "About",
+        link: "/about"
+      })))), _react["default"].createElement(_components.ExperienceContact, null), _react["default"].createElement(_components.Footer, null));
     }
   }]);
 

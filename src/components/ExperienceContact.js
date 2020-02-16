@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ExperienceContact, SplitDiv, Subtitle, Button, Title } from '../styled-components/global';
+import { FlexSplit, SplitDiv, Subtitle, Button, Title } from '../styled-components/global';
 
 class ExperienceContactComponent extends Component {
   constructor(props){
@@ -52,7 +52,7 @@ class ExperienceContactComponent extends Component {
     const { email, message, displayedMessage } = this.state;
     return (
       <div>
-      <ExperienceContact>
+      <FlexSplit>
         <SplitDiv>
           <Subtitle>Work Experience</Subtitle>
           <p>Designer/Sales - Anasazi Stone</p>
@@ -73,7 +73,7 @@ class ExperienceContactComponent extends Component {
 
           </form>
         </SplitDiv>
-      </ExperienceContact>
+      </FlexSplit>
       {
         displayedMessage &&
         <Title style={{color: "#000"}}>{displayedMessage}</Title>

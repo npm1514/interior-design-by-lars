@@ -26,6 +26,8 @@ var _bodyParser = _interopRequireDefault(require("body-parser"));
 
 var _nodemailer = _interopRequireDefault(require("nodemailer"));
 
+var _path = _interopRequireDefault(require("path"));
+
 var _config = _interopRequireDefault(require("./config"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -76,6 +78,10 @@ app.get('/work', function (req, res) {
   var data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, workBundle, _WorkRoot["default"], "work"));
+});
+app.get('/images/:id', function (req, res) {
+  res.set('Cache-Control', 'public, max-age=31557600');
+  res.sendFile(_path["default"].join(__dirname, '../images/' + req.params.id));
 });
 app.post('/emailer', function (req, res) {
   var transporter = _nodemailer["default"].createTransport({

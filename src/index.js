@@ -14,6 +14,7 @@ import compression from 'compression';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
+import path from 'path';
 
 import config from './config';
 
@@ -63,6 +64,11 @@ app.get('/work', (req, res) => {
   let data = "";
   res.set('Cache-Control', 'public, max-age=31557600');
   res.send(returnHTML(data, workBundle, WorkRoot, "work"));
+});
+
+app.get('/images/:id', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=31557600');
+  res.sendFile(path.join(__dirname, '../images/' + req.params.id));
 });
 
 app.post('/emailer', (req, res) => {

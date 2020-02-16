@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Header, Footer, ExperienceContact } from '../components';
-import { PageWrapper, PageContent } from '../styled-components/global';
+import { Header, Footer, ExperienceContact, LinkSquare, Paralax } from '../components';
+import { PageWrapper, PageContent, FlexSplit, SplitDiv, Subtitle } from '../styled-components/global';
 
 class About extends Component {
     render(){
@@ -8,7 +8,18 @@ class About extends Component {
           <PageWrapper>
               <Header/>
               <PageContent>
-                <img src="https://cdn.onekindesign.com/wp-content/uploads/2016/02/Scandinavian-Bedroom-Ideas-01-1-Kindesign.jpg"/>
+                <Paralax img="/images/lars.jpg" />
+                <SplitDiv style={{margin: "100px 0"}}>
+                  <Subtitle>Lars has a passion for clean design, innovative solutions, and refreshing looks. She has experience in tile design, landscape architecture, and floral arrangement. Look to Lars for your next residential design needs.</Subtitle>
+                </SplitDiv>
+                <FlexSplit>
+                  <SplitDiv>
+                    <LinkSquare img="/images/IMG_6151.JPG" text="Home" link="/"/>
+                  </SplitDiv>
+                  <SplitDiv>
+                    <LinkSquare img="/images/tiles_2.jpg" text="Work" link="/about"/>
+                  </SplitDiv>
+                </FlexSplit>
               </PageContent>
               <ExperienceContact/>
               <Footer/>

@@ -3,14 +3,54 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SplitDiv = exports.ExperienceContact = exports.Footer = exports.BottomWrap = exports.MenuWrap = exports.DesktopHeader = exports.MobileHeader = exports.Header = exports.Subtitle = exports.Button = exports.Title = exports.PageContent = exports.PageWrapper = void 0;
+exports.LinkText = exports.SquareLink = exports.LinkSquare = exports.Paralax = exports.SplitDiv = exports.FlexSplit = exports.Footer = exports.BottomWrap = exports.MenuWrap = exports.DesktopHeader = exports.MobileHeader = exports.Header = exports.Subtitle = exports.Button = exports.Title = exports.PageContent = exports.PageWrapper = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _templateObject17() {
+  var data = _taggedTemplateLiteral(["\n    font-family: 'Noto Serif JP', serif;\n    font-size: 24px;\n    text-align: center;\n    color: #333;\n    background-color: #ffffff80;\n    padding: 12px;\n    height: max-content;\n    font-weight: 100;\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    margin: auto;\n  "]);
+
+  _templateObject17 = function _templateObject17() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject16() {
+  var data = _taggedTemplateLiteral(["\n\n  "]);
+
+  _templateObject16 = function _templateObject16() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject15() {
+  var data = _taggedTemplateLiteral(["\n    width: calc(100vw - 48px);\n    height: calc(100vw - 48px);\n    background-size: cover;\n    background-position: center center;\n    background-repeat: no-repeat;\n    position: relative;\n    @media(min-width: 600px){\n      width: calc(50vw - 56px);\n      height: calc(50vw - 56px);\n    }\n    &:hover {\n      cursor: pointer;\n    }\n    &:hover h1 {\n      background-color: #ffffff50;\n    }\n  "]);
+
+  _templateObject15 = function _templateObject15() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject14() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 550px;\n    background-size: cover;\n    background-position: top center;\n    background-repeat: no-repeat;\n    background-attachment: fixed;\n  "]);
+
+  _templateObject14 = function _templateObject14() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    @media (min-width: 600px){\n      width: 50%;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    img {\n      margin-bottom: 16px;\n    }\n    @media (min-width: 600px){\n      width: calc(50% - 8px);\n    }\n  "]);
 
   _templateObject13 = function _templateObject13() {
     return data;
@@ -20,7 +60,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    flex-direction: column;\n    margin-top: 100px;\n    input {\n      width: 100%;\n      padding: 16px;\n      display: block;\n      margin: 16px 0;\n      font-size: 15px;\n      border: 1px solid #eee;\n      font-family: 'Noto Serif JP', serif;\n    }\n    textarea {\n      width: 100%;\n      padding: 16px;\n      display: block;\n      margin: 16px 0;\n      font-size: 15px;\n      border: 1px solid #eee;\n      font-family: 'Noto Serif JP', serif;\n    }\n    p {\n      font-size: 16px;\n      letter-spacing: 0em;\n      font-family: 'Noto Serif JP', serif;\n      font-weight: 400;\n      font-style: normal;\n      font-size: 15px;\n      letter-spacing: .05em;\n      line-height: 2em;\n      text-transform: none;\n      color: rgba(51,51,51,.5);\n      margin: 4px 0;\n      margin-right: 32px;\n    }\n    div:nth-child(2){\n      margin-top: 100px;\n    }\n    @media (min-width: 600px){\n      flex-direction: row;\n      div:nth-child(2){\n        margin-top: 0;\n      }\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: flex-start;\n    flex-direction: column;\n    margin-top: 100px;\n    input {\n      width: 100%;\n      padding: 16px;\n      display: block;\n      margin: 16px 0;\n      font-size: 15px;\n      border: 1px solid #eee;\n      font-family: 'Noto Serif JP', serif;\n    }\n    textarea {\n      width: 100%;\n      padding: 16px;\n      display: block;\n      margin: 16px 0;\n      font-size: 15px;\n      border: 1px solid #eee;\n      font-family: 'Noto Serif JP', serif;\n    }\n    p {\n      font-size: 16px;\n      letter-spacing: 0em;\n      font-family: 'Noto Serif JP', serif;\n      font-weight: 400;\n      font-style: normal;\n      font-size: 15px;\n      letter-spacing: .05em;\n      line-height: 2em;\n      text-transform: none;\n      color: rgba(51,51,51,.5);\n      margin: 4px 0;\n      margin-right: 32px;\n    }\n    div:nth-child(2){\n      margin-top: 100px;\n    }\n    @media (min-width: 600px){\n      flex-direction: row;\n      div:nth-child(2){\n        margin-top: 0;\n      }\n    }\n  "]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -90,7 +130,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    font-family: 'Noto Serif JP', serif;\n    font-size: 16px;\n    text-align: left;\n    color: #333;\n    font-weight: 100;\n    @media (min-width: 350px){\n      font-size: 18px;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    font-family: 'Noto Serif JP', serif;\n    font-size: 16px;\n    text-align: left;\n    color: #333;\n    font-weight: 100;\n    line-height: 3;\n    @media (min-width: 350px){\n      font-size: 18px;\n    }\n  "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -110,7 +150,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    font-family: 'Noto Serif JP', serif;\n    font-size: 18px;\n    text-align: center;\n    color: #333;\n    margin: 0 24px;\n    font-weight: 100;\n    @media (min-width: 350px){\n      font-size: 20px;\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    font-family: 'Noto Serif JP', serif;\n    font-size: 18px;\n    text-align: center;\n    color: #333;\n    margin: 8px 24px;\n    font-weight: 100;\n    @media (min-width: 350px){\n      font-size: 20px;\n    }\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -188,10 +228,26 @@ var Footer = _styledComponents["default"].footer(_templateObject11());
 
 exports.Footer = Footer;
 
-var ExperienceContact = _styledComponents["default"].div(_templateObject12());
+var FlexSplit = _styledComponents["default"].div(_templateObject12());
 
-exports.ExperienceContact = ExperienceContact;
+exports.FlexSplit = FlexSplit;
 
 var SplitDiv = _styledComponents["default"].div(_templateObject13());
 
 exports.SplitDiv = SplitDiv;
+
+var Paralax = _styledComponents["default"].div(_templateObject14());
+
+exports.Paralax = Paralax;
+
+var LinkSquare = _styledComponents["default"].div(_templateObject15());
+
+exports.LinkSquare = LinkSquare;
+
+var SquareLink = _styledComponents["default"].a(_templateObject16());
+
+exports.SquareLink = SquareLink;
+
+var LinkText = _styledComponents["default"].h1(_templateObject17());
+
+exports.LinkText = LinkText;

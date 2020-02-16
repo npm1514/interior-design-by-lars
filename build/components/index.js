@@ -39,6 +39,18 @@ Object.defineProperty(exports, "ExperienceContact", {
     return _ExperienceContact["default"];
   }
 });
+Object.defineProperty(exports, "Paralax", {
+  enumerable: true,
+  get: function get() {
+    return _Paralax["default"];
+  }
+});
+Object.defineProperty(exports, "LinkSquare", {
+  enumerable: true,
+  get: function get() {
+    return _LinkSquare["default"];
+  }
+});
 
 var _Header = _interopRequireDefault(require("./Header"));
 
@@ -51,5 +63,9 @@ var _Footer = _interopRequireDefault(require("./Footer"));
 var _Drawer = _interopRequireDefault(require("./Drawer"));
 
 var _ExperienceContact = _interopRequireDefault(require("./ExperienceContact"));
+
+var _Paralax = _interopRequireDefault(require("./Paralax"));
+
+var _LinkSquare = _interopRequireDefault(require("./LinkSquare"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

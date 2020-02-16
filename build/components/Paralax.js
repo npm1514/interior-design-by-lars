@@ -7,8 +7,6 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _components = require("../components");
-
 var _global = require("../styled-components/global");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -33,40 +31,31 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Home =
+var ParalaxComponent =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(Home, _Component);
+  _inherits(ParalaxComponent, _Component);
 
-  function Home() {
-    _classCallCheck(this, Home);
+  function ParalaxComponent() {
+    _classCallCheck(this, ParalaxComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ParalaxComponent).apply(this, arguments));
   }
 
-  _createClass(Home, [{
+  _createClass(ParalaxComponent, [{
     key: "render",
     value: function render() {
-      return _react["default"].createElement(_global.PageWrapper, null, _react["default"].createElement(_components.Header, null), _react["default"].createElement(_global.PageContent, null, _react["default"].createElement(_components.Paralax, {
-        img: "/images/IMG_6151.JPG"
-      }), _react["default"].createElement(_global.SplitDiv, {
+      var img = this.props.img;
+      return _react["default"].createElement(_global.Paralax, {
         style: {
-          margin: "100px 0"
+          backgroundImage: "url(\"".concat(img, "\")")
         }
-      }, _react["default"].createElement(_global.Subtitle, null, "Lars has a passion for clean design, innovative solutions, and refreshing looks. She has experience in tile design, landscape architecture, and floral arrangement. Look to Lars for your next residential design needs.")), _react["default"].createElement(_global.FlexSplit, null, _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
-        img: "/images/lars.jpg",
-        text: "About",
-        link: "/"
-      })), _react["default"].createElement(_global.SplitDiv, null, _react["default"].createElement(_components.LinkSquare, {
-        img: "/images/tiles_2.jpg",
-        text: "Work",
-        link: "/about"
-      })))), _react["default"].createElement(_components.ExperienceContact, null), _react["default"].createElement(_components.Footer, null));
+      });
     }
   }]);
 
-  return Home;
+  return ParalaxComponent;
 }(_react.Component);
 
-var _default = Home;
+var _default = ParalaxComponent;
 exports["default"] = _default;
